@@ -9,6 +9,9 @@
 import Foundation
 
 struct ValidationManager {
+    
+    var isInLibrary = false
+    
     static let latitudeMin = 45.50764422402299
     static var latitudeMax = 100.00
     static var longitudeMin = -100.00

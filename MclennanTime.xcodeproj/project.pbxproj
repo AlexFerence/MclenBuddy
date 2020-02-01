@@ -14,6 +14,7 @@
 		9BFACA9523E5EA4D000C5CFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFACA9423E5EA4D000C5CFA /* Assets.xcassets */; };
 		9BFACA9823E5EA4D000C5CFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFACA9623E5EA4D000C5CFA /* LaunchScreen.storyboard */; };
 		9BFACAA323E5F227000C5CFA /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACAA223E5F227000C5CFA /* ValidationManager.swift */; };
+		9BFACAA523E60E07000C5CFA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BFACAA423E60E07000C5CFA /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		9BFACA9723E5EA4D000C5CFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BFACA9923E5EA4D000C5CFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BFACAA223E5F227000C5CFA /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
+		9BFACAA423E60E07000C5CFA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				9BFACA9423E5EA4D000C5CFA /* Assets.xcassets */,
 				9BFACA9623E5EA4D000C5CFA /* LaunchScreen.storyboard */,
 				9BFACA9923E5EA4D000C5CFA /* Info.plist */,
+				9BFACAA423E60E07000C5CFA /* GoogleService-Info.plist */,
 			);
 			path = MclennanTime;
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BFACA9823E5EA4D000C5CFA /* LaunchScreen.storyboard in Resources */,
+				9BFACAA523E60E07000C5CFA /* GoogleService-Info.plist in Resources */,
 				9BFACA9523E5EA4D000C5CFA /* Assets.xcassets in Resources */,
 				9BFACA9323E5EA4B000C5CFA /* Main.storyboard in Resources */,
 			);
