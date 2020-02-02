@@ -9,6 +9,7 @@
 import UIKit
 import CoreLocation
 
+
 class LocationViewController: UIViewController {
     @IBOutlet weak var latLabel: UILabel!
     @IBOutlet weak var longLabel: UILabel!

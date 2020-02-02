@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A77745C73DD62C90B26BF18 /* Pods_MclennanTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33275BE3A67F3651BCC249B6 /* Pods_MclennanTime.framework */; };
 		9BFACA8C23E5EA4B000C5CFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACA8B23E5EA4B000C5CFA /* AppDelegate.swift */; };
 		9BFACA8E23E5EA4B000C5CFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACA8D23E5EA4B000C5CFA /* SceneDelegate.swift */; };
 		9BFACA9023E5EA4B000C5CFA /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACA8F23E5EA4B000C5CFA /* LocationViewController.swift */; };
@@ -15,9 +16,15 @@
 		9BFACA9823E5EA4D000C5CFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFACA9623E5EA4D000C5CFA /* LaunchScreen.storyboard */; };
 		9BFACAA323E5F227000C5CFA /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACAA223E5F227000C5CFA /* ValidationManager.swift */; };
 		9BFACAA523E60E07000C5CFA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9BFACAA423E60E07000C5CFA /* GoogleService-Info.plist */; };
+		9BFACAA723E61511000C5CFA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACAA623E61511000C5CFA /* SignUpViewController.swift */; };
+		9BFACAA923E65250000C5CFA /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACAA823E65250000C5CFA /* constants.swift */; };
+		9BFACAAB23E659D8000C5CFA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACAAA23E659D8000C5CFA /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33275BE3A67F3651BCC249B6 /* Pods_MclennanTime.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MclennanTime.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4642E1955A75735850F04BD6 /* Pods-MclennanTime.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MclennanTime.release.xcconfig"; path = "Target Support Files/Pods-MclennanTime/Pods-MclennanTime.release.xcconfig"; sourceTree = "<group>"; };
+		550A69BA46CF96CE3DFF9EEB /* Pods-MclennanTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MclennanTime.debug.xcconfig"; path = "Target Support Files/Pods-MclennanTime/Pods-MclennanTime.debug.xcconfig"; sourceTree = "<group>"; };
 		9BFACA8823E5EA4B000C5CFA /* MclennanTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MclennanTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFACA8B23E5EA4B000C5CFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BFACA8D23E5EA4B000C5CFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,6 +35,9 @@
 		9BFACA9923E5EA4D000C5CFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9BFACAA223E5F227000C5CFA /* ValidationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationManager.swift; sourceTree = "<group>"; };
 		9BFACAA423E60E07000C5CFA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9BFACAA623E61511000C5CFA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		9BFACAA823E65250000C5CFA /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		9BFACAAA23E659D8000C5CFA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A77745C73DD62C90B26BF18 /* Pods_MclennanTime.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,6 +57,8 @@
 			children = (
 				9BFACA8A23E5EA4B000C5CFA /* MclennanTime */,
 				9BFACA8923E5EA4B000C5CFA /* Products */,
+				FAD820323660C7DF3C249206 /* Pods */,
+				D939D0BDF1D1A364A4529266 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -69,6 +82,7 @@
 				9BFACA9623E5EA4D000C5CFA /* LaunchScreen.storyboard */,
 				9BFACA9923E5EA4D000C5CFA /* Info.plist */,
 				9BFACAA423E60E07000C5CFA /* GoogleService-Info.plist */,
+				9BFACAA823E65250000C5CFA /* constants.swift */,
 			);
 			path = MclennanTime;
 			sourceTree = "<group>";
@@ -93,8 +107,27 @@
 			isa = PBXGroup;
 			children = (
 				9BFACA8F23E5EA4B000C5CFA /* LocationViewController.swift */,
+				9BFACAA623E61511000C5CFA /* SignUpViewController.swift */,
+				9BFACAAA23E659D8000C5CFA /* LoginViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		D939D0BDF1D1A364A4529266 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33275BE3A67F3651BCC249B6 /* Pods_MclennanTime.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FAD820323660C7DF3C249206 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				550A69BA46CF96CE3DFF9EEB /* Pods-MclennanTime.debug.xcconfig */,
+				4642E1955A75735850F04BD6 /* Pods-MclennanTime.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -104,9 +137,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9BFACA9C23E5EA4D000C5CFA /* Build configuration list for PBXNativeTarget "MclennanTime" */;
 			buildPhases = (
+				DB5BE09936CC93F53E5ADBE3 /* [CP] Check Pods Manifest.lock */,
 				9BFACA8423E5EA4B000C5CFA /* Sources */,
 				9BFACA8523E5EA4B000C5CFA /* Frameworks */,
 				9BFACA8623E5EA4B000C5CFA /* Resources */,
+				9C9BE5DCEFFB8655F02E052B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -164,15 +199,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		9C9BE5DCEFFB8655F02E052B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MclennanTime/Pods-MclennanTime-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-MclennanTime/Pods-MclennanTime-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-MclennanTime/Pods-MclennanTime-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB5BE09936CC93F53E5ADBE3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MclennanTime-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9BFACA8423E5EA4B000C5CFA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFACAAB23E659D8000C5CFA /* LoginViewController.swift in Sources */,
 				9BFACAA323E5F227000C5CFA /* ValidationManager.swift in Sources */,
 				9BFACA9023E5EA4B000C5CFA /* LocationViewController.swift in Sources */,
 				9BFACA8C23E5EA4B000C5CFA /* AppDelegate.swift in Sources */,
+				9BFACAA723E61511000C5CFA /* SignUpViewController.swift in Sources */,
 				9BFACA8E23E5EA4B000C5CFA /* SceneDelegate.swift in Sources */,
+				9BFACAA923E65250000C5CFA /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +394,7 @@
 		};
 		9BFACA9D23E5EA4D000C5CFA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 550A69BA46CF96CE3DFF9EEB /* Pods-MclennanTime.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -332,6 +413,7 @@
 		};
 		9BFACA9E23E5EA4D000C5CFA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4642E1955A75735850F04BD6 /* Pods-MclennanTime.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
