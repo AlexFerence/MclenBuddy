@@ -12,10 +12,10 @@ struct ValidationManager {
     
     var isInLibrary = false
     
-    static let latitudeMin = 45.50764422402299
-    static var latitudeMax = 100.00
-    static var longitudeMin = -100.00
-    static var longitudeMax = 100.00
+    static let latitudeMin = 45.502910
+    static var latitudeMax = 45.503716
+    static var longitudeMin = -73.576430
+    static var longitudeMax = -73.575459
     
     static func isInLibrary(latitude: Double, longitude: Double) -> Bool {
         if (latitude > latitudeMin && latitude < latitudeMax && latitude > longitudeMin && latitude < longitudeMax) {

@@ -11,7 +11,6 @@
 		9BFACA8C23E5EA4B000C5CFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACA8B23E5EA4B000C5CFA /* AppDelegate.swift */; };
 		9BFACA8E23E5EA4B000C5CFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACA8D23E5EA4B000C5CFA /* SceneDelegate.swift */; };
 		9BFACA9023E5EA4B000C5CFA /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACA8F23E5EA4B000C5CFA /* LocationViewController.swift */; };
-		9BFACA9323E5EA4B000C5CFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFACA9123E5EA4B000C5CFA /* Main.storyboard */; };
 		9BFACA9523E5EA4D000C5CFA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9BFACA9423E5EA4D000C5CFA /* Assets.xcassets */; };
 		9BFACA9823E5EA4D000C5CFA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFACA9623E5EA4D000C5CFA /* LaunchScreen.storyboard */; };
 		9BFACAA323E5F227000C5CFA /* ValidationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACAA223E5F227000C5CFA /* ValidationManager.swift */; };
@@ -19,6 +18,9 @@
 		9BFACAA723E61511000C5CFA /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACAA623E61511000C5CFA /* SignUpViewController.swift */; };
 		9BFACAA923E65250000C5CFA /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACAA823E65250000C5CFA /* constants.swift */; };
 		9BFACAAB23E659D8000C5CFA /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACAAA23E659D8000C5CFA /* LoginViewController.swift */; };
+		9BFACAAD23E65FFF000C5CFA /* ResetPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACAAC23E65FFF000C5CFA /* ResetPasswordViewController.swift */; };
+		9BFACAAF23E676D8000C5CFA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9BFACAAE23E676D8000C5CFA /* Main.storyboard */; };
+		9BFACAB223E67C48000C5CFA /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACAB123E67C48000C5CFA /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +31,6 @@
 		9BFACA8B23E5EA4B000C5CFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BFACA8D23E5EA4B000C5CFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		9BFACA8F23E5EA4B000C5CFA /* LocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationViewController.swift; sourceTree = "<group>"; };
-		9BFACA9223E5EA4B000C5CFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9BFACA9423E5EA4D000C5CFA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9BFACA9723E5EA4D000C5CFA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9BFACA9923E5EA4D000C5CFA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,6 +39,9 @@
 		9BFACAA623E61511000C5CFA /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		9BFACAA823E65250000C5CFA /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		9BFACAAA23E659D8000C5CFA /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9BFACAAC23E65FFF000C5CFA /* ResetPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResetPasswordViewController.swift; sourceTree = "<group>"; };
+		9BFACAAE23E676D8000C5CFA /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		9BFACAB123E67C48000C5CFA /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,7 @@
 		9BFACAA023E5F1E1000C5CFA /* View */ = {
 			isa = PBXGroup;
 			children = (
-				9BFACA9123E5EA4B000C5CFA /* Main.storyboard */,
+				9BFACAAE23E676D8000C5CFA /* Main.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -109,6 +113,8 @@
 				9BFACA8F23E5EA4B000C5CFA /* LocationViewController.swift */,
 				9BFACAA623E61511000C5CFA /* SignUpViewController.swift */,
 				9BFACAAA23E659D8000C5CFA /* LoginViewController.swift */,
+				9BFACAAC23E65FFF000C5CFA /* ResetPasswordViewController.swift */,
+				9BFACAB123E67C48000C5CFA /* WelcomeViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -193,7 +199,7 @@
 				9BFACA9823E5EA4D000C5CFA /* LaunchScreen.storyboard in Resources */,
 				9BFACAA523E60E07000C5CFA /* GoogleService-Info.plist in Resources */,
 				9BFACA9523E5EA4D000C5CFA /* Assets.xcassets in Resources */,
-				9BFACA9323E5EA4B000C5CFA /* Main.storyboard in Resources */,
+				9BFACAAF23E676D8000C5CFA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,9 +252,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BFACAB223E67C48000C5CFA /* WelcomeViewController.swift in Sources */,
 				9BFACAAB23E659D8000C5CFA /* LoginViewController.swift in Sources */,
 				9BFACAA323E5F227000C5CFA /* ValidationManager.swift in Sources */,
 				9BFACA9023E5EA4B000C5CFA /* LocationViewController.swift in Sources */,
+				9BFACAAD23E65FFF000C5CFA /* ResetPasswordViewController.swift in Sources */,
 				9BFACA8C23E5EA4B000C5CFA /* AppDelegate.swift in Sources */,
 				9BFACAA723E61511000C5CFA /* SignUpViewController.swift in Sources */,
 				9BFACA8E23E5EA4B000C5CFA /* SceneDelegate.swift in Sources */,
@@ -259,14 +267,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		9BFACA9123E5EA4B000C5CFA /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9BFACA9223E5EA4B000C5CFA /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9BFACA9623E5EA4D000C5CFA /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

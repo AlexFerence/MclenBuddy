@@ -8,19 +8,45 @@
 
 import UIKit
 import CoreLocation
-
+import Firebase
 
 class LocationViewController: UIViewController {
+    @IBOutlet weak var welcomeLabel: UILabel!
     @IBOutlet weak var latLabel: UILabel!
     @IBOutlet weak var longLabel: UILabel!
-    @IBOutlet weak var counterLabel: UILabel!
+    //@IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var locationSwitch: UISwitch!
+    
+    var lastFalseTime = Date().timeIntervalSince1970
+    
+    let db = Firestore.firestore()
     
     var counter = 0
     
     override func viewDidLoad() {
+        self.navigationController?.isNavigationBarHidden = true
         super.viewDidLoad()
         locationManager.startUpdatingLocation()
+        navigationItem.setHidesBackButton(true, animated: true);
+        
+        lastFalseTime = Date().timeIntervalSince1970
+        
+        self.navigationController?.isNavigationBarHidden = true
+        navigationItem.setHidesBackButton(true, animated: true)
+        
+        if let uid = Auth.auth().currentUser?.uid {
+            let docRef = db.collection(K.usersCollection).document(uid)
+            docRef.getDocument { (document, error) in
+                        if let document = document, document.exists {
+                            let dataDescription = document.data()
+                            if let name = dataDescription?[K.FStore.nameField] {
+                                self.welcomeLabel.text = "Welcome \(name)"
+                            }
+                        } else {
+                            print("Document does not exist")
+                        }
+            }
+        }
         
     }
     private lazy var locationManager: CLLocationManager = {
@@ -40,6 +66,8 @@ class LocationViewController: UIViewController {
             locationManager.stopUpdatingLocation()
         }
     }
+    
+    
 }
 
 extension LocationViewController: CLLocationManagerDelegate {
@@ -54,7 +82,7 @@ extension LocationViewController: CLLocationManagerDelegate {
             //validate if it is in desired area here
             if ValidationManager.isInLibrary(latitude: lat, longitude: long) == true {
                 counter = counter + 1
-                counterLabel.text = String(counter)
+                //counterLabel.text = String(counter)
             }
             
         }
