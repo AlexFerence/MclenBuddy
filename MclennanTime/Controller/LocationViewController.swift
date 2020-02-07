@@ -12,10 +12,12 @@ import Firebase
 
 class LocationViewController: UIViewController {
     @IBOutlet weak var welcomeLabel: UILabel!
-    @IBOutlet weak var latLabel: UILabel!
-    @IBOutlet weak var longLabel: UILabel!
+    //@IBOutlet weak var latLabel: UILabel!
+    //@IBOutlet weak var longLabel: UILabel!
     //@IBOutlet weak var counterLabel: UILabel!
     @IBOutlet weak var locationSwitch: UISwitch!
+    
+    var isInLibrary = false
     
     var lastFalseTime = Date().timeIntervalSince1970
     
@@ -76,13 +78,29 @@ extension LocationViewController: CLLocationManagerDelegate {
             var lat = loc.coordinate.latitude
             var long = loc.coordinate.longitude
             print(lat, long)
-            latLabel.text = String(lat)
-            longLabel.text = String(long)
+            //latLabel.text = String(lat)
+            //longLabel.text = String(long)
             
             //validate if it is in desired area here
             if ValidationManager.isInLibrary(latitude: lat, longitude: long) == true {
-                counter = counter + 1
-                //counterLabel.text = String(counter)
+                if isInLibrary == false {
+                    print("you have entered the library")
+                    lastFalseTime = Date().timeIntervalSince1970
+                    isInLibrary = true
+                }
+                else {
+                    print("problem with isInLibrary")
+                }
+            }
+            else {
+                if isInLibrary == true {
+                    print("you have left the library")
+                    var totalTime = Date().timeIntervalSince1970 - lastFalseTime
+                    print(totalTime)
+                    isInLibrary = false
+                    
+                }
+                
             }
             
         }
