@@ -85,7 +85,7 @@
         <!--Login View Controller-->
         <scene sceneID="8Mc-lN-VAJ">
             <objects>
-                <viewController id="brh-2i-HrY" customClass="LoginViewController" customModule="MclennanTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="brh-2i-HrY" customClass="LoginViewController" customModule="MclennanTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ncw-PT-dMg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -285,7 +285,7 @@
         <!--Item-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="LocationViewController" customModule="MclennanTime" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LocationViewController" id="BYZ-38-t0r" customClass="LocationViewController" customModule="MclennanTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -324,7 +324,7 @@
                                         <color key="textColor" red="0.60655128960000004" green="0.110474132" blue="0.12154745309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNo-BF-CTK">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FNo-BF-CTK">
                                         <rect key="frame" x="271.5" y="0.0" width="122.5" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.60655128960000004" green="0.110474132" blue="0.12154745309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -405,7 +405,10 @@
                     <tabBarItem key="tabBarItem" title="Item" image="person" catalog="system" selectedImage="person" id="S9e-km-x7W"/>
                     <navigationItem key="navigationItem" id="n6R-Hh-hvA"/>
                     <connections>
+                        <outlet property="dayCounterLabel" destination="vu2-N0-aXF" id="dc1-k4-ULF"/>
                         <outlet property="locationSwitch" destination="nil-Xa-Caq" id="DLe-4x-KfO"/>
+                        <outlet property="totalCounterLabel" destination="hbj-SE-kgY" id="ePG-4W-QhQ"/>
+                        <outlet property="weekCounterLabel" destination="3P8-jr-agc" id="8J9-hT-u9O"/>
                         <outlet property="welcomeLabel" destination="B0O-Zi-I9N" id="KXt-ru-QKe"/>
                     </connections>
                 </viewController>

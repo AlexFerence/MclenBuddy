@@ -12,9 +12,10 @@ import Firebase
 
 class LocationViewController: UIViewController {
     @IBOutlet weak var welcomeLabel: UILabel!
-    //@IBOutlet weak var latLabel: UILabel!
-    //@IBOutlet weak var longLabel: UILabel!
-    //@IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet weak var dayCounterLabel: UILabel!
+    @IBOutlet weak var weekCounterLabel: UILabel!
+    @IBOutlet weak var totalCounterLabel: UILabel!
+    
     @IBOutlet weak var locationSwitch: UISwitch!
     
     var isInLibrary = false
@@ -24,6 +25,8 @@ class LocationViewController: UIViewController {
     let db = Firestore.firestore()
     
     var counter = 0
+    
+    var dailyCounter = 0.0
     
     override func viewDidLoad() {
         self.navigationController?.isNavigationBarHidden = true
@@ -37,7 +40,7 @@ class LocationViewController: UIViewController {
         navigationItem.setHidesBackButton(true, animated: true)
         
         if let uid = Auth.auth().currentUser?.uid {
-            let docRef = db.collection(K.usersCollection).document(uid)
+            let docRef = db.collection(K.FStore.usersCollection).document(uid)
             docRef.getDocument { (document, error) in
                         if let document = document, document.exists {
                             let dataDescription = document.data()
@@ -47,6 +50,31 @@ class LocationViewController: UIViewController {
                         } else {
                             print("Document does not exist")
                         }
+            }
+        }
+        print("starting to update location")
+        locationManager.startUpdatingLocation()
+        if let user = Auth.auth().currentUser?.email {
+            
+            db.collection(K.FStore.timeCollection).whereField(K.FStore.emailField, isEqualTo: user).addSnapshotListener() { (querySnapshot, err) in
+                if let err = err {
+                    print("Error getting documents: \(err)")
+                } else {
+                    self.dailyCounter = 0
+                    for document in querySnapshot!.documents {
+                        //print(document.data()[K.FStore.emailField])
+                        if let emailData = document.data()[K.FStore.emailField] as? String, let timeUpdated = document.data()[K.FStore.timeUpdated] as? Double, let timeField = document.data()[K.FStore.timeField] as? Double {
+                            //print(timeUpdated)
+                            if Date().timeIntervalSince1970 - timeUpdated < 86400 {
+                                self.dailyCounter = self.dailyCounter + timeField
+                            }
+                            
+                        }
+                    }
+                    //after the loop
+                    let minutes = Int(self.dailyCounter / 60)
+                    self.dayCounterLabel.text = "\(minutes)m"
+                }
             }
         }
         
@@ -61,6 +89,7 @@ class LocationViewController: UIViewController {
     }()
     
     @IBAction func LocationSwitchChanged(_ sender: UISwitch) {
+        print("changed")
         if sender.isOn {
             locationManager.startUpdatingLocation()
         }
@@ -89,20 +118,29 @@ extension LocationViewController: CLLocationManagerDelegate {
                     isInLibrary = true
                 }
                 else {
-                    print("problem with isInLibrary")
+                    print("you are currently in the library")
                 }
             }
             else {
                 if isInLibrary == true {
                     print("you have left the library")
                     var totalTime = Date().timeIntervalSince1970 - lastFalseTime
+                    print("TOTAL TIME:")
                     print(totalTime)
                     isInLibrary = false
-                    
+                    if let email = Auth.auth().currentUser?.email {
+                        if totalTime > 5 {
+                            let docRef = db.collection(K.FStore.timeCollection).document()
+                            docRef.setData([
+                                K.FStore.emailField: email,
+                                K.FStore.timeField: totalTime,
+                                K.FStore.timeUpdated: Date().timeIntervalSince1970
+                            ])
+                        }
+                    }
+                    updateLabels()
                 }
-                
             }
-            
         }
         guard let mostRecentLocation = locations.last else {
             return
@@ -114,6 +152,9 @@ extension LocationViewController: CLLocationManagerDelegate {
         else {
             print("app is in the bacground, location tracking is:\(mostRecentLocation)")
         }
+    }
+    func updateLabels() {
+        let docRef = db.collection(K.FStore.timeCollection)
     }
 }
 

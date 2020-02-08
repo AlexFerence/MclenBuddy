@@ -9,13 +9,16 @@
 import Foundation
 
 struct K {
-    static let usersCollection = "users"
     static let segueSignInToLocation = "SignUpToLocation"
     static let sequeLogInToLocation = "loginToLocation"
     
     struct FStore {
         static let emailField = "email"
+        static let usersCollection = "users"
         static let nameField = "name"
+        static let timeField = "time"
+        static let timeCollection = "timeCollection"
+        static let timeUpdated = "timeUpdated"
         
     }
 }

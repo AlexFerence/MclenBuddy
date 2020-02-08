@@ -37,9 +37,10 @@ class SignUpViewController: UIViewController {
                 else {
                     print("user authenticated succesfully")
                     if let uid = Auth.auth().currentUser?.uid {
-                        self.db.collection(K.usersCollection).document(uid).setData([
+                        self.db.collection(K.FStore.usersCollection).document(uid).setData([
                             K.FStore.emailField: email,
-                            K.FStore.nameField: name
+                            K.FStore.nameField: name,
+                            K.FStore.timeField: 0.0
                         ])
                         self.performSegue(withIdentifier: K.segueSignInToLocation, sender: self)
                     }
