@@ -27,6 +27,8 @@ class LocationViewController: UIViewController {
     var counter = 0
     
     var dailyCounter = 0.0
+    var weeklyCounter = 0.0
+    var totalCounter = 0.0
     
     override func viewDidLoad() {
         self.navigationController?.isNavigationBarHidden = true
@@ -60,7 +62,9 @@ class LocationViewController: UIViewController {
                 if let err = err {
                     print("Error getting documents: \(err)")
                 } else {
-                    self.dailyCounter = 0
+                    self.dailyCounter = 0.0
+                    self.weeklyCounter = 0.0
+                    self.totalCounter = 0.0
                     for document in querySnapshot!.documents {
                         //print(document.data()[K.FStore.emailField])
                         if let emailData = document.data()[K.FStore.emailField] as? String, let timeUpdated = document.data()[K.FStore.timeUpdated] as? Double, let timeField = document.data()[K.FStore.timeField] as? Double {
@@ -68,12 +72,18 @@ class LocationViewController: UIViewController {
                             if Date().timeIntervalSince1970 - timeUpdated < 86400 {
                                 self.dailyCounter = self.dailyCounter + timeField
                             }
+                            if Date().timeIntervalSince1970 - timeUpdated < 604800 {
+                                self.weeklyCounter = self.weeklyCounter + timeField
+                            }
+                            self.totalCounter = self.totalCounter + timeField
                             
                         }
                     }
-                    //after the loop
-                    let minutes = Int(self.dailyCounter / 60)
-                    self.dayCounterLabel.text = "\(minutes)m"
+                    //after the loop has counted everything set the labels
+                    self.dayCounterLabel.text = self.displayTimeNumbers(seconds: self.dailyCounter)
+                    self.weekCounterLabel.text = self.displayTimeNumbers(seconds: self.weeklyCounter)
+                    self.totalCounterLabel.text = self.displayTimeNumbers(seconds: self.totalCounter)
+                    
                 }
             }
         }
@@ -96,6 +106,18 @@ class LocationViewController: UIViewController {
         else {
             locationManager.stopUpdatingLocation()
         }
+    }
+    func displayTimeNumbers(seconds: Double) -> String{
+        let minutes = Int(seconds / 60)
+        if minutes < 60 {
+            return("\(minutes)m")
+        }
+        else {
+            var hours = Int(minutes / 60)
+            var remainderMins = Int(minutes % 60)
+            return("\(hours)h \(remainderMins)m")
+        }
+        
     }
     
     

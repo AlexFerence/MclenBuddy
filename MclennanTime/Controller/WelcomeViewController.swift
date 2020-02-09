@@ -16,7 +16,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var progressView: UIProgressView!
     var timer = Timer()
     var player: AVAudioPlayer!
-    var totalTime = 200
+    var totalTime = 30
     var secondsPassed = 0
     
     let db = Firestore.firestore()
@@ -71,14 +71,12 @@ class WelcomeViewController: UIViewController {
             secondsPassed += 1
             progressView.progress = Float(secondsPassed) /
                 Float(totalTime)
-            print(Float(secondsPassed) / Float(totalTime))
+            //print(Float(secondsPassed) / Float(totalTime))
         } else {
             timer.invalidate()
             timeLabel.text = "DONE!"
-            
-            //let url = Bundle.main.url(forResource: "alarm_sound", withExtension: "mp3")
-            //player = try! AVAudioPlayer(contentsOf: url!)
-            //player.play()
+            timer = Timer.scheduledTimer(timeInterval: 2.0, target: self, selector: #selector(updateTimer), userInfo:nil, repeats: false)
+            secondsPassed = 0
         }
     }
     

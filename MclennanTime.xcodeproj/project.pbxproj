@@ -10,6 +10,7 @@
 		5A77745C73DD62C90B26BF18 /* Pods_MclennanTime.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33275BE3A67F3651BCC249B6 /* Pods_MclennanTime.framework */; };
 		9B4FD40D23EF4956008C986D /* AppContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FD40C23EF4956008C986D /* AppContainerViewController.swift */; };
 		9B4FD40F23EF4980008C986D /* AppManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FD40E23EF4980008C986D /* AppManager.swift */; };
+		9B4FD41123F05FC3008C986D /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B4FD41023F05FC3008C986D /* FirstViewController.swift */; };
 		9BFACA8C23E5EA4B000C5CFA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACA8B23E5EA4B000C5CFA /* AppDelegate.swift */; };
 		9BFACA8E23E5EA4B000C5CFA /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACA8D23E5EA4B000C5CFA /* SceneDelegate.swift */; };
 		9BFACA9023E5EA4B000C5CFA /* LocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BFACA8F23E5EA4B000C5CFA /* LocationViewController.swift */; };
@@ -31,6 +32,7 @@
 		550A69BA46CF96CE3DFF9EEB /* Pods-MclennanTime.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MclennanTime.debug.xcconfig"; path = "Target Support Files/Pods-MclennanTime/Pods-MclennanTime.debug.xcconfig"; sourceTree = "<group>"; };
 		9B4FD40C23EF4956008C986D /* AppContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppContainerViewController.swift; sourceTree = "<group>"; };
 		9B4FD40E23EF4980008C986D /* AppManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppManager.swift; sourceTree = "<group>"; };
+		9B4FD41023F05FC3008C986D /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		9BFACA8823E5EA4B000C5CFA /* MclennanTime.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MclennanTime.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9BFACA8B23E5EA4B000C5CFA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9BFACA8D23E5EA4B000C5CFA /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				9BFACAAC23E65FFF000C5CFA /* ResetPasswordViewController.swift */,
 				9BFACAB123E67C48000C5CFA /* WelcomeViewController.swift */,
 				9B4FD40C23EF4956008C986D /* AppContainerViewController.swift */,
+				9B4FD41023F05FC3008C986D /* FirstViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 				9BFACAB223E67C48000C5CFA /* WelcomeViewController.swift in Sources */,
 				9BFACAAB23E659D8000C5CFA /* LoginViewController.swift in Sources */,
 				9BFACAA323E5F227000C5CFA /* ValidationManager.swift in Sources */,
+				9B4FD41123F05FC3008C986D /* FirstViewController.swift in Sources */,
 				9BFACA9023E5EA4B000C5CFA /* LocationViewController.swift in Sources */,
 				9B4FD40D23EF4956008C986D /* AppContainerViewController.swift in Sources */,
 				9BFACAAD23E65FFF000C5CFA /* ResetPasswordViewController.swift in Sources */,

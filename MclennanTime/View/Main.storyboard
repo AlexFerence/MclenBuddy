@@ -7,10 +7,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--First View Controller-->
         <scene sceneID="LMu-OK-sZO">
             <objects>
-                <viewController id="gbv-Pg-oR6" sceneMemberID="viewController">
+                <viewController id="gbv-Pg-oR6" customClass="FirstViewController" customModule="MclennanTime" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0GR-GU-S3s">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -77,6 +77,9 @@
                         <viewLayoutGuide key="safeArea" id="4JX-5r-1Id"/>
                     </view>
                     <navigationItem key="navigationItem" id="EqH-Oq-FOe"/>
+                    <connections>
+                        <segue destination="hGC-A7-HOF" kind="show" identifier="InitialAutoLogin" id="QN1-U1-PXe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uxU-eM-fr4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -335,24 +338,24 @@
                                     <constraint firstAttribute="height" constant="30" id="8K4-Ib-Ojl"/>
                                 </constraints>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="b7M-30-At2">
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="b7M-30-At2">
                                 <rect key="frame" x="10" y="331.5" width="394" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vu2-N0-aXF">
-                                        <rect key="frame" x="0.0" y="0.0" width="122.5" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="131.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <color key="textColor" red="0.60655128960000004" green="0.110474132" blue="0.12154745309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3P8-jr-agc">
-                                        <rect key="frame" x="135.5" y="0.0" width="123" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <rect key="frame" x="131.5" y="0.0" width="131" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <color key="textColor" red="0.60655128960000004" green="0.110474132" blue="0.12154745309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0m" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hbj-SE-kgY">
-                                        <rect key="frame" x="271.5" y="0.0" width="122.5" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <rect key="frame" x="262.5" y="0.0" width="131.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <color key="textColor" red="0.60655128960000004" green="0.110474132" blue="0.12154745309999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -554,6 +557,6 @@
         <image name="person" catalog="system" width="64" height="58"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oGk-jS-Sqb"/>
+        <segue reference="QN1-U1-PXe"/>
     </inferredMetricsTieBreakers>
 </document>
